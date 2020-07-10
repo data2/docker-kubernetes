@@ -2,4 +2,12 @@
                   
 docker search openresty
 docker pull openresty/openresty
+非挂载
 docker run --name first-openresty -p 82:80 openresty/openresty
+
+挂载配置文件
+mkdir  /Users/leewow/openresty/
+docker cp first-openresty:/usr/local/openresty/nginx/conf/nginx.conf /Users/leewow/openresty/conf
+启动
+docker run --name first-openresty -p 83:80  \
+-v /Users/leewow/openresty/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf  openresty/openresty
