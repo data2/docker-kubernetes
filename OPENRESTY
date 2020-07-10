@@ -1,0 +1,5 @@
+# openresty
+                  
+docker search openresty
+docker pull openresty/openresty
+docker run --name first-openresty -p 82:80 openresty/openresty
