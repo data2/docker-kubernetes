@@ -33,3 +33,8 @@
 
      # 查看状态是否正常，如果没有错误信息，那就ok
      mysql> show slave status \G;    
+     
+     
+   # 连接测试
+   
+   localhost:32306  root/mysql123
