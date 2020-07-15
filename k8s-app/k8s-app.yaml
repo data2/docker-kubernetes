@@ -18,20 +18,10 @@ spec:
       containers:
       - name: k8s-app
         image: k8s-app:1.0
-        ports:
-        - containerPort: 8089
-          protocol: TCP
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 8089
-          initialDelaySeconds: 30
-          timeoutSeconds: 30
         imagePullPolicy: IfNotPresent
       tolerations:
       - key: node-role.kubernetes.io/master
         effect: NoSchedule
-
 ---
 apiVersion: v1
 kind: Service
@@ -43,7 +33,8 @@ metadata:
 spec:
   ports:
   - port: 8089
-    nodePort: 30089
+    targetPort: 8080
+    nodePort: 30112
   selector:
     app: k8s-app
   type: NodePort
