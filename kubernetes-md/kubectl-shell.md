@@ -114,7 +114,7 @@ $ JSONPATH='{range .items[*]}{@.metadata.name}:{range @.status.conditions[*]}{@.
 # 列出当前 Pod 中使用的 Secret
 $ kubectl get pods -o json | jq '.items[].spec.containers[].env[]?.valueFrom.secretKeyRef.name' | grep -v null | sort | uniq
 ```
-
+  
 ## 更新资源
 ```
 $ kubectl rolling-update frontend-v1 -f frontend-v2.json           # 滚动更新 pod frontend-v1
