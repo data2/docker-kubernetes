@@ -1,7 +1,7 @@
 
 # openresty
 
-               ```
+```
 docker search openresty
 docker pull openresty/openresty
 非挂载
