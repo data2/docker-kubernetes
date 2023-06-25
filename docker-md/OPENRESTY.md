@@ -1,6 +1,7 @@
 
 # openresty
-                  
+
+               ```
 docker search openresty
 docker pull openresty/openresty
 非挂载
@@ -13,13 +14,17 @@ docker cp first-openresty:/usr/local/openresty/nginx/html/ ./html/
 docker cp first-openresty:/usr/local/openresty/nginx/logs/ ./logs/
 
 docker cp first-openresty:/etc/nginx/conf.d/  ./conf.d/
+```
 
+# 启动
 
-启动
+```
 docker run --name first-openresty -p 83:80  \
 -v /Users/leewow/openresty/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf  openresty/openresty
+```
 
-docker-compose 启动
+# docker-compose 启动
+
 docker-compose。yml
 
 ```
