@@ -103,8 +103,13 @@ docker pull  redis
 # nginx
 
 yum install nginx
+
 systemctl start nginx
+
  /usr/sbin/nginx
+ 
  /etc/nginx/nginx.conf
+ 
  /usr/share/nginx/html
+ 
  firewall-cmd --zone=public --add-port=80/tcp
