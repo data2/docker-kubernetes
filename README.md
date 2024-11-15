@@ -89,15 +89,14 @@ nacos/nacos-server
 ```
 
 # minio
-
+```
 docker pull  minio/minio
 
-
 docker run -p 9000:9000 -p 9001:9001 --name minio -e "MINIO_ROOT_USER=admin"  -e "MINIO_ROOT_PASSWORD=admin123456" -v /home/soft/minio/data:/data   -v /home/soft/minio/config:/root/.minio minio/minio server /data --console-address ":9001"
-
+```
 
 # redis
-
+```
 docker pull  redis
 
 # nginx
@@ -113,3 +112,13 @@ systemctl start nginx
  /usr/share/nginx/html
  
  firewall-cmd --zone=public --add-port=80/tcp
+```
+
+# webrtc-streamer
+
+```
+docker pull mpromonet/webrtc-streamer
+
+docker run -p 8000:8000 -it mpromonet/webrtc-streamer
+
+```
