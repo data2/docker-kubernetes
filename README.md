@@ -87,6 +87,13 @@ nacos/nacos-server
 
 </configuration>
 ```
+# MYSQL
+```
+docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456  -v D:\volume\mysql:/var/lib/mysql -d mysql:latest
+
+
+```
+
 
 # minio
 ```
