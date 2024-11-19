@@ -1,4 +1,5 @@
 # docker
+## yum 安装
 ```
 yum install docker
 
@@ -17,6 +18,26 @@ vi /etc/docker/daemon.json
 
 sudo systemctl start docker
 
+```
+
+## unbuntu snap 安装 
+
+```
+/var/snap/docker/current/config/daemon.json
+
+{
+    "log-level": "error",
+    "storage-driver": "overlay2",
+    "registry-mirrors": [
+        "https://do.nark.eu.org",
+        "https://dc.j8.work",
+        "https://docker.m.daocloud.io",
+        "https://dockerproxy.com",
+        "https://docker.mirrors.ustc.edu.cn",
+        "https://docker.nju.edu.cn"
+    ]
+}
+sudo snap restart docker
 ```
 
 # nacos
