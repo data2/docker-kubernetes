@@ -142,10 +142,6 @@ systemctl start nginx
  firewall-cmd --zone=public --add-port=80/tcp
 ```
 
-# webrtc-streamer
-
-
-
 # nginx
 
 ```
@@ -157,22 +153,7 @@ docker cp testnginx:/etc/nginx D:\\volume
 
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# webrtc-streamer
 
 
 ```
