@@ -145,7 +145,7 @@ systemctl start nginx
 # nginx
 
 ```
-docker run --name nginx -v D:\\volume\\nginx:/etc/nginx:ro -p 8080:80 -d nginx:stable-alpine3.20-perl
+docker run --name nginx -d -v D:\\volume\\nginx:/etc/nginx:ro -p 8080:80 -d nginx:stable-alpine3.20-perl
 
 获取nginx配置
 docker run --name testnginx -p 8080:80 nginx:stable-alpine3.20-perl
