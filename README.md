@@ -144,6 +144,37 @@ systemctl start nginx
 
 # webrtc-streamer
 
+
+
+# nginx
+
+```
+docker run --name nginx -v D:\\volume\\nginx:/etc/nginx:ro -p 8080:80 -d nginx:stable-alpine3.20-perl
+
+获取nginx配置
+docker run --name testnginx -p 8080:80 nginx:stable-alpine3.20-perl
+docker cp testnginx:/etc/nginx D:\\volume
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 docker pull mpromonet/webrtc-streamer
 
