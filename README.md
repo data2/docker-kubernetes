@@ -12,10 +12,19 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2/
 conda config --add channels defaults
 conda config --set show_channel_urls yes
-conda create -n pytorch-env python=3.8
+conda create -n pytorch-env python=3.10
 conda activate pytorch-env
 conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 python -c "import torch; print(torch.__version__)"
+
+pip install opencv-contrib-python==4.11.0.86
+pip install scikit-learn==1.6.1
+pip install matplotlib==3.9.2
+pip install
+pip install
+pip install
+pip install
+pip install 
 
 ```
 
