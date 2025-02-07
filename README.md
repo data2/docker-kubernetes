@@ -171,3 +171,26 @@ docker pull mpromonet/webrtc-streamer
 docker run -p 8000:8000 -it mpromonet/webrtc-streamer
 
 ```
+
+# linux - conda -pytorch
+
+```
+wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+sh Anaconda3-2024.10-1-Linux-x86_64.sh
+vi ~/.bashrc
+export PATH="$HOME/miniconda3/bin:$PATH"
+source ~/.bashrc
+
+ ~/anaconda3/bin/conda config --remove-key channels
+ ~/anaconda3/bin/conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+ ~/anaconda3/bin/conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r/
+ ~/anaconda3/bin/conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2/
+ ~/anaconda3/bin/conda config --add channels defaults
+ ~/anaconda3/bin/conda config --set show_channel_urls yes
+conda create -n pytorch-env python=3.8
+conda activate pytorch-env
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+python -c "import torch; print(torch.__version__)"
+
+
+```
