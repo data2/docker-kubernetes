@@ -14,7 +14,9 @@ conda config --add channels defaults
 conda config --set show_channel_urls yes
 conda create -n pytorch-env python=3.10
 conda activate pytorch-env
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+#conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+conda install pytorch==2.5.1 torchvision torchaudio cudatoolkit=11.3 -c pytorch
+
 python -c "import torch; print(torch.__version__)"
 
 pip install opencv-contrib-python==4.11.0.86
