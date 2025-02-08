@@ -15,7 +15,8 @@ conda config --set show_channel_urls yes
 conda create -n pytorch-env python=3.10
 conda activate pytorch-env
 #conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-conda install pytorch==2.5.1 torchvision torchaudio cudatoolkit=11.3 -c pytorch
+#conda install pytorch==2.5.1 torchvision torchaudio cudatoolkit=11.3 -c pytorch
+conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=12.1 -c pytorch -c nvidia
 
 python -c "import torch; print(torch.__version__)"
 
