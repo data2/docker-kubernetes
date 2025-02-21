@@ -1,3 +1,18 @@
+# ollama deepseek
+```
+
+CPU模式
+docker run -d -p 11434:11434 -v /d/volume/ollama:/root/.ollama --name ollama ollama/ollama
+
+GPU模式
+docker run --gpus=all -d -p 11434:11434 -v /data/ollama:/root/.ollama --name ollama ollama/ollama
+
+docker exec -it ollama /bin/bash
+
+ollama pull deepseek-r1:8b
+
+curl http://localhost:11434/api/generate -d '{"model": "deepseek-r1:8b", "stream": false, "prompt": "你好"}'
+```
 # linux - conda -pytorch
 
 ```
