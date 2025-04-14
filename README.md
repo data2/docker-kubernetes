@@ -175,6 +175,8 @@ docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456  -v D:\volume
 docker pull  minio/minio
 
 docker run -p 9000:9000 -p 9001:9001 --name minio -e "MINIO_ROOT_USER=admin"  -e "MINIO_ROOT_PASSWORD=admin123456" -v /home/soft/minio/data:/data   -v /home/soft/minio/config:/root/.minio minio/minio server /data --console-address ":9001"
+
+docker run -d  -p 9000:9000 -p 9001:9001 --name miniodata -e "MINIO_ROOT_USER=admin"  -e "MINIO_ROOT_PASSWORD=admin123456" -v /mnt/miniodata:/data   -v /mnt/minioconfig/config:/root/.minio minio/minio:RELEASE.2022-10-24T18-35-07Z server /data --console-address ":9001"
 ```
 
 # redis
