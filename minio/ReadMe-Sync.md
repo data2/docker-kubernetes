@@ -22,9 +22,9 @@ mc alias set minio2 http://localhost:19000 admin admin123456
 
 #### 3. **手动同步（一次性全量同步）**
 ```bash
-mc mirror minio1/bucket minio2/bucket
+mc mirror minio/zndb minio2/zndb
 ```
-- 将 `minio1` 的 `bucket` 同步到 `minio2` 的同名存储桶。
+- 将 `minio` 的 `bucket` 同步到 `minio2` 的同名存储桶。
 
 #### 4. **自动同步（监听变化并实时同步）**
 ```bash
