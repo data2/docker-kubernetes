@@ -14,8 +14,8 @@ chmod +x /usr/local/bin/mc
 
 #### 2. **配置 `mc` 连接两个 MinIO 实例**
 ```bash
-mc alias set minio1 http://<minio1-ip>:9000 admin1 password1
-mc alias set minio2 http://<minio2-ip>:9002 admin2 password2
+mc alias set minio http://localhost:9000 admin admin123456
+mc alias set minio2 http://localhost:19000 admin admin123456
 ```
 - `minio1` 和 `minio2` 是别名，可以自定义。
 - 替换 `<minio1-ip>` 和 `<minio2-ip>` 为实际的 MinIO 服务器 IP/Docker 容器 IP。
