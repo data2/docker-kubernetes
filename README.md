@@ -224,6 +224,9 @@ docker cp testnginx:/etc/nginx D:\\volume
 
 
 ```
+
+docker run -d -p 8000:8000 --cpus=".5" -it mpromonet/webrtc-streamer -o
+
 docker pull mpromonet/webrtc-streamer
 
 docker run -p 8000:8000 -it mpromonet/webrtc-streamer
